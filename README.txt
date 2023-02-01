@@ -1,19 +1,19 @@
 dualfisheye2equi: warps a dualfisheye image to an equirectangular image
 
-August 2017, August 2021
-Author: G. Caron
-Contact: guillaume.caron@u-picardie.fr
+August 2017, February 2023
+Author: G. CARON, A. ANDRÉ
+Contact: guillaume.caron@u-picardie.fr, antoine.andre@cnrs.fr
 
 Prerequisities
 0. CMake (version 3.14.5 tested)
 1. ViSP (version 3.2.0 tested)
 2. libPeR_base (version 0.0.2 tested, https://github.com/PerceptionRobotique/libPeR_base)
+3. Opencv (version 4 tested)
 
 Configure and prepare equi2omni to build with catkin
 0. export PER_DIR=/path/to/libPeR_base/build/
-1. create a "build" directory in the same directory than CMakeLists.txt and cd in
-2. run ccmake .., configure and generate
-3. make
+1. fill in the bash file with the various parameters for the conversion
+2. launch the bash file ./launch_conversion.sh
 
 Run dualfisheye2equi
 0. Create a "media" directory next to the "build" directory
