@@ -287,13 +287,7 @@ int main(int argc, char **argv)
                 P.set_u(u_er);
                 P.set_v(v_er);
                 equirectCam.pixelMeterConversion(P);
-
-                double x = P.get_x();
-                double y = P.get_y();
-
-                Xs = cos(y) * cos(x);
-                Ys = cos(y) * sin(x);
-                Zs = sin(y);
+                equirectCam.projectImageSphere(P, Xs, Ys, Zs);
 
                 // sphere rotation
                 P.set_oX(Xs);
